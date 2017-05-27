@@ -1,24 +1,31 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
+// Pull in required dependencies
+var express = require('express');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 var app = express();
+var exphbs = require('express-handlebars');
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(process.cwd() + "/public"));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+// Serve static content for the app from the 'public' directory
+app.use(express.static(process.cwd() + '/public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Set Handlebars.
-var exphbs = require("express-handlebars");
+// Override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// Set Handlebars as the view engine
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/burgers_controller.js");
+
+// Import routes and give the server access to them
+var routes = require('./controllers/burgers_controller.js');
+
+app.use('/', routes);
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

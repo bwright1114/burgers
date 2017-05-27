@@ -1,0 +1,88 @@
+html {
+ 	background-color:#e1f7d5;
+ }
+
+ body {
+ 	width: 75%;
+	margin: 0 auto; 
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+ }
+
+ #cute_burger {
+ 	display: block;
+    margin: auto;
+ }
+
+ h1 {
+ 	text-align: center;
+ 	font-family: 'Kumar One', cursive;
+ 	font-size: 65px;
+ 	margin: 50px;
+	 
+ }
+
+ .burgerAvailable {
+ 	font-family: 'Metamorphous', cursive;;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+
+ 	border-radius: 25px;
+ 	width: 100%;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #c9c9ff;
+ 	border: none;
+ }
+
+ .burgerAvailable:hover {
+ 	background-color: #e1f7d5;
+ }
+
+ .burgerEaten {
+ 	font-family: 'Metamorphous', cursive;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+
+ 	border-radius: 25px;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #f1cbff;
+ }
+
+ h2 {
+  	text-align: center;
+ 	font-family: 'Kumar One', cursive;
+ 	font-size: 40px;
+ 	margin: 50px;
+ }
+
+ .formContainer {
+ 	background-color: #e1f7d5;
+ }
+
+ .addBurgerButton {
+ 	font-family: 'Metamorphous', cursive;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+ 	border-radius: 25px;
+ 	width: 100%;
+ 	margin: 0;
+ 	padding: 10px;
+ 	background-color: #ffbdbd;
+ 	border: none;
+ }
+
+.addBurgerButton:active {
+	background-color: #e1f7d5;
+}
+
+.burgerFooter {
+	background-color: #FFBDBD;
+	padding: 20px 0;
+}
+
